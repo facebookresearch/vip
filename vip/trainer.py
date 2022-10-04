@@ -43,10 +43,10 @@ class Trainer():
         b_im_r = b_im.reshape(bs*img_stack_size, 3, H, W)
         alles = model(b_im_r)
         alle = alles.reshape(bs, img_stack_size, -1)
-        e0 = alle[:, 0] # initial
-        eg = alle[:, 1] # final
-        es0_vip = alle[:, 2]
-        es1_vip = alle[:, 3]
+        e0 = alle[:, 0] # initial, o_0
+        eg = alle[:, 1] # final, o_g
+        es0_vip = alle[:, 2] # o_t
+        es1_vip = alle[:, 3] # o_t+1
 
         full_loss = 0
 
