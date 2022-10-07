@@ -45,6 +45,12 @@ This should generate the following plots in `vip/examples/embedding_curves/`:
 <img src="vip/assets/fold_towel.png" width="200">
 </p>
 
+In addition to this official repository, VIP has also been incorporated into [TorchRL](https://github.com/pytorch/rl) as an out-of-box visual representation for any Gym environment. After you install TorchRL, using VIP is as simple as:
+```
+from torchrl.envs.transforms import VIPTransform
+env = TransformedEnv(my_env, VIPTransform(keys_in=["next_pixels"], download=True)
+```
+
 ## Training VIP Representation
 Our codebase supports training VIP on both the Ego4D dataset that was used in pre-training our released VIP model as well as any custom video dataset. The video dataset directory should use the following structure:
 ```
@@ -70,6 +76,17 @@ python train_vip.py --config-name=config_vip_ego4d dataset=ego4d datapath=ego4d_
 ## License
 
 The source code in this repository is licensed under the CC BY-NC 4.0 License.
+
+## Citation
+If you find this repository or paper useful for your research, please cite
+```
+@article{ma2022vip,
+  title={VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training},
+  author={Ma, Yecheng Jason and Sodhani, Shagun and Jayaraman, Dinesh and Bastani, Osbert and Kumar, Vikash and Zhang, Amy},
+  journal={arXiv preprint arXiv:2210.00030},
+  year={2022}
+}
+```
 
 ## Ackowledgements
 
