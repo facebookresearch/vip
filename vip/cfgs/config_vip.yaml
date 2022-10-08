@@ -19,8 +19,8 @@ device: cuda
 
 # experiment
 experiment: train_vip
-wandbuser: "jasonyma_fair"
-wandbproject: "vip_test"
+wandbuser: 
+wandbproject: 
 
 # data
 dataset:
