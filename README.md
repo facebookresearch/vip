@@ -1,4 +1,4 @@
-# VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training
+# VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training (ICLR 2023, Spotlight)
 
 #### [[Project Page]](https://sites.google.com/view/vip-rl/) [[Paper]](https://arxiv.org/abs/2210.00030)
 
