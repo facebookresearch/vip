@@ -1,0 +1,99 @@
+<mujocoinclude>
+<!-- =================================================
+    Copyright 2022 Vikash Kumar
+    Model   :: TriFinger (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com)
+    Details :: https://github.com/vikashplus/trifinger_sim
+    Acknoledgement :: Model details from https://github.com/rr-learning/CausalWorld
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+
+    <body name="trifinger" pos="0 0 0" childclass="trifinger">
+    <geom pos="0 0 0.29" rgba="0.1 0.1 0.1 1" mesh="center_axis_sim" />
+    <!-- <geom rgba="0.95 0.95 0.95 1" mesh="high_table_boundary" /> -->
+    <body name="finger_upper_link_0" pos="0 0 0.29">
+        <inertial pos="0.006 0.122 0" quat="0.706381 0.7052 0.0462414 -0.0397478" mass="0.26689" diaginertia="0.00102372 0.00102223 6.44164e-05" />
+        <joint name="finger_base_to_upper_joint_0" pos="0 0 0" axis="0 1 0" limited="true" range="-0.33 1" />
+        <geom mesh="prox-sim" />
+        <geom class="trifinger_col" mesh="prox-sim" />
+        <geom pos="0.01569 0.1643 0" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+        <geom size="0.005 0.0075" pos="0.015 0.083 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.002 0.06" pos="-0.008 0.124 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.014 0.001" pos="-0.0085 0.05 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <body name="finger_middle_link_0" pos="0.01685 0.0505 0">
+            <inertial pos="0.0393501 -0.00012438 -0.086667" quat="0.676911 0.0153968 0.0129048 0.735791" mass="0.27163" diaginertia="0.000948287 0.000941953 7.43298e-05" />
+            <joint name="finger_upper_to_middle_joint_0" pos="0 0 0" axis="1 0 0" limited="true" range="0 1.57" />
+            <geom mesh="int_sim" />
+            <geom class="trifinger_col" mesh="int_sim" />
+            <geom pos="0.0488 0 -0.0462" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+            <geom size="0.005 0.0075" pos="0.0488 0 -0.13" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.002 0.06" pos="0.025 0 -0.09" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.014 0.001" pos="0.024 0 -0.16" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <body name="finger_lower_link_0" pos="0.05015 0 -0.16">
+                <inertial pos="0.0172829 -7.03432e-06 -0.0847363" quat="1 8.17879e-05 0.000475957 -0.00013458" mass="0.08669" diaginertia="0.000410131 0.000407733 7.32858e-06" />
+                <joint name="finger_middle_to_lower_joint_0" pos="0 0 0" axis="1 0 0" limited="true" range="-2.7 0" />
+                <geom mesh="tip_link_sim" />
+                <geom class="trifinger_col" mesh="tip_link_sim" />
+                <geom pos="0.019 0 -0.16" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+                <geom pos="0.019 0 -0.16" class="trifinger_col" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+            </body>
+        </body>
+    </body>
+    <body name="finger_upper_link_120" pos="0 0 0.29" quat="0.5 0 0 -0.866025">
+        <inertial pos="0.006 0.122 0" quat="0.706381 0.7052 0.0462414 -0.0397478" mass="0.26689" diaginertia="0.00102372 0.00102223 6.44164e-05" />
+        <joint name="finger_base_to_upper_joint_120" pos="0 0 0" axis="0 1 0" limited="true" range="-0.33 1" />
+        <geom mesh="prox-sim" />
+        <geom class="trifinger_col" mesh="prox-sim" />
+        <geom pos="0.01569 0.1643 0" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+        <geom size="0.005 0.0075" pos="0.015 0.083 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.002 0.06" pos="-0.008 0.124 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.014 0.001" pos="-0.0085 0.05 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <body name="finger_middle_link_120" pos="0.01685 0.0505 0">
+            <inertial pos="0.0393501 -0.00012438 -0.086667" quat="0.676911 0.0153968 0.0129048 0.735791" mass="0.27163" diaginertia="0.000948287 0.000941953 7.43298e-05" />
+            <joint name="finger_upper_to_middle_joint_120" pos="0 0 0" axis="1 0 0" limited="true" range="0 1.57" />
+            <geom mesh="int_sim" />
+            <geom class="trifinger_col" mesh="int_sim" />
+            <geom pos="0.0488 0 -0.0462" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+            <geom size="0.005 0.0075" pos="0.0488 0 -0.13" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.002 0.06" pos="0.025 0 -0.09" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.014 0.001" pos="0.024 0 -0.16" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <body name="finger_lower_link_120" pos="0.05015 0 -0.16">
+                <inertial pos="0.0172829 -7.03432e-06 -0.0847363" quat="1 8.17879e-05 0.000475957 -0.00013458" mass="0.08669" diaginertia="0.000410131 0.000407733 7.32858e-06" />
+                <joint name="finger_middle_to_lower_joint_120" pos="0 0 0" axis="1 0 0" limited="true" range="-2.7 0" />
+                <geom mesh="tip_link_sim" />
+                <geom class="trifinger_col" mesh="tip_link_sim" />
+                <geom pos="0.019 0 -0.16" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+                <geom pos="0.019 0 -0.16" class="trifinger_col" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+            </body>
+        </body>
+    </body>
+    <body name="finger_upper_link_240" pos="0 0 0.29" quat="-0.5 0 0 -0.866025">
+        <inertial pos="0.006 0.122 0" quat="0.706381 0.7052 0.0462414 -0.0397478" mass="0.26689" diaginertia="0.00102372 0.00102223 6.44164e-05" />
+        <joint name="finger_base_to_upper_joint_240" pos="0 0 0" axis="0 1 0" limited="true" range="-0.33 1" />
+        <geom mesh="prox-sim" />
+        <geom class="trifinger_col" mesh="prox-sim" />
+        <geom pos="0.01569 0.1643 0" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+        <geom size="0.005 0.0075" pos="0.015 0.083 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.002 0.06" pos="-0.008 0.124 0" quat="0.707107 0.707107 0 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <geom size="0.014 0.001" pos="-0.0085 0.05 0" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+        <body name="finger_middle_link_240" pos="0.01685 0.0505 0">
+            <inertial pos="0.0393501 -0.00012438 -0.086667" quat="0.676911 0.0153968 0.0129048 0.735791" mass="0.27163" diaginertia="0.000948287 0.000941953 7.43298e-05" />
+            <joint name="finger_upper_to_middle_joint_240" pos="0 0 0" axis="1 0 0" limited="true" range="0 1.57" />
+            <geom mesh="int_sim" />
+            <geom class="trifinger_col" mesh="int_sim" />
+            <geom pos="0.0488 0 -0.0462" rgba="0.17 0.17 0.17 1" mesh="motor_sim" />
+            <geom size="0.005 0.0075" pos="0.0488 0 -0.13" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.002 0.06" pos="0.025 0 -0.09" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <geom size="0.014 0.001" pos="0.024 0 -0.16" quat="0.707107 0 0.707107 0" type="cylinder" rgba="0.17 0.17 0.17 1" />
+            <body name="finger_lower_link_240" pos="0.05015 0 -0.16">
+                <inertial pos="0.0172829 -7.03432e-06 -0.0847363" quat="1 8.17879e-05 0.000475957 -0.00013458" mass="0.08669" diaginertia="0.000410131 0.000407733 7.32858e-06" />
+                <joint name="finger_middle_to_lower_joint_240" pos="0 0 0" axis="1 0 0" limited="true" range="-2.7 0" />
+                <geom mesh="tip_link_sim" />
+                <geom class="trifinger_col" mesh="tip_link_sim" />
+                <geom pos="0.019 0 -0.16" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+                <geom pos="0.019 0 -0.16" class="trifinger_col" rgba="0.33 0.36 0.37 1" mesh="tip_sim" />
+            </body>
+        </body>
+    </body>
+    </body>
+</mujocoinclude>

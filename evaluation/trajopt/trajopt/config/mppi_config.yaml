@@ -1,0 +1,56 @@
+default:
+    - override hydra/output: local
+    - override hydra/launcher: local
+
+# general inputs
+env               :   kitchen_sdoor_open-v3             
+seed              :   123
+
+pixel_based       :   True                  # pixel based (True) or state based (False) experiment
+embedding_reward  :   True                   # whether or not to use embedding distance as reward
+embedding         :   vip                     # choice of embedding network
+camera            :   default                 # choice of camera to use for image generation, left_cam, right_cam,...
+device            :   cuda
+proprio           :   0
+
+# environment related kwargs
+env_kwargs:
+    env_name      :   ${env}                
+    device        :   ${device}               
+    image_width   :   256
+    image_height  :   256
+    camera_name   :   ${camera}
+    pixel_based   :   ${pixel_based}
+    render_gpu_id :   0                 
+    load_path     :   ""
+    proprio       :   ${proprio} 
+    embedding_reward: ${embedding_reward} 
+    goal_timestep : 49
+    init_timestep : 20
+
+# RL parameters (all params related to MPPI.)
+H_total           :       50
+num_traj          :       1
+num_iter          :       1
+plan_horizon      :       12 
+paths_per_cpu     :       8 
+num_cpu           :       4
+filter:
+    beta_0: 0.25
+    beta_1: 0.8
+    beta_2: 0.0   
+kappa             :       5.0
+gamma             :       0.98
+default_act       :       'mean'
+visualize         :       True
+
+
+# Algorithm hyperparameters : if alg requires additional params, can be specified here (or defaults will be used)
+alg_hyper_params  :   {'device': 'cpu'}
+
+# general outputs
+job_name          :   ${embedding}
+experiment        :  "None"
+hydra:
+    job:
+        name: online-mppi

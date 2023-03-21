@@ -1,0 +1,52 @@
+<mujoco>
+<!-- ======================================================
+    Model 		:: Sawyer (MuJoCoV2.0)
+    Author      :: Vikash Kumar
+        Contacts 	: vikashplus@gmail.com
+        Last edits 	: 3Apr'20, 25Aug'18
+    Copyright 2018 Vikash Kumar
+        Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -->
+    <compiler angle="radian"/>
+    <option iterations="50" integrator="Euler" timestep="0.002" cone="elliptic" />
+
+    <asset>
+        <mesh name="pedestal" file="../sawyer_sim/meshes/sawyer/pedestal.stl" />
+        <mesh name="base" file="../sawyer_sim/meshes/sawyer/base.stl" />
+        <mesh name="l0" file="../sawyer_sim/meshes/sawyer/l0.stl" />
+        <mesh name="head" file="../sawyer_sim/meshes/sawyer/head.stl" />
+        <mesh name="l1" file="../sawyer_sim/meshes/sawyer/l1.stl" />
+        <mesh name="l2" file="../sawyer_sim/meshes/sawyer/l2.stl" />
+        <mesh name="l3" file="../sawyer_sim/meshes/sawyer/l3.stl" />
+        <mesh name="l4" file="../sawyer_sim/meshes/sawyer/l4.stl" />
+        <mesh name="l5" file="../sawyer_sim/meshes/sawyer/l5.stl" />
+        <mesh name="l6" file="../sawyer_sim/meshes/sawyer/l6.stl" />
+    </asset>
+
+    <contact>
+        <exclude body1="right_arm_base_link" body2="right_l0"/>
+    </contact>
+
+    <default>
+        <default class='sawyer'>
+            <joint limited="true" damping="10" stiffness="0" armature=".1" user="0"/>
+            <geom solref="0.008 1" solimp="0.95 0.95 0.01" margin="0.001" user="0" rgba="0.2 0.2 0.2 1" group="3"/>
+            <motor ctrllimited="true" ctrlrange="-100 100"/>
+            <position ctrllimited="true" forcelimited="true"/>
+            
+            <default class='sawyer_col'>
+                <geom rgba=".4 .5 .6 1" group="4"/>
+            </default>
+            <default class='sawyer_viz'>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="0.5 0.1 0.1 1"/>
+            </default>
+
+            <default class='sawyer_gripper'>
+                <joint damping="100" armature='5'/>
+                <geom friction="1 0.5 0.001" rgba=".7 .6 .55 1" contype="2" conaffinity="2" condim="6" group="1"/>
+                <position kp="500" forcerange="-70 70"/>
+            </default>
+        </default>
+    </default>
+
+</mujoco>

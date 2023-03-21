@@ -1,0 +1,15 @@
+<mujocoinclude>
+<!-- ======================================================
+    Model 		:: Sawyer (MuJoCoV2.0)
+    Author      :: Vikash Kumar
+        Contacts 	: vikashplus@gmail.com
+        Last edits 	: 3Apr'20, 25Aug'18
+    Copyright 2018 Vikash Kumar
+        Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -->
+    <actuator>
+        <position joint="rc_close" ctrlrange="0 0.015" class='sawyer_gripper'/>
+        <position joint="lc_close" ctrlrange="0 0.015" class='sawyer_gripper'/>
+    </actuator>
+
+</mujocoinclude>
