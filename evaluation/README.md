@@ -31,11 +31,13 @@ cd evaluation/trajopt/trajopt; pip install -e .
 ```
 
 ## Generate Demonstrations
-Generate demonstrations that will provide a goal image and optionally the initial pose of the robot. We have already generated the demonstration for task ```kitchen_sdoor_open-v3```, and you may generate demonstrations for all tasks
+Generate demonstrations that will provide a goal image and optionally the initial pose of the robot. We have already generated the demonstration for task ```kitchen_sdoor_open-v3``` in ```./evaluation/dataset```, and you may generate demonstrations for all tasks
 ```
 cd dataset; ./scripts/generate_all_demo.sh
 ```
-Note that the generated trajectory may not actually solve the task! This can be resolved by usually (1) re-running the script, or (2) make the MPPI solver stronger by increasing MPPI related hyperparameters in ```trajopt/trajopt/config/mppi_config.yaml```. 
+Note that the generated trajectory may not actually solve the task! This can be resolved by usually (1) re-running the script, or (2) make the MPPI solver stronger by increasing MPPI related hyperparameters in ```./evaluation/trajopt/trajopt/config/mppi_config.yaml```. 
+
+Once the demonstration is generated, change ```DATASET_ABS_PATH``` in ```./evaluation/trajopt/__init__.py``` to point to the absolute path of your dataset folder. 
 
 I apologize I cannot share the original demonstrations used in the paper since I am no longer at Meta, but the original demonstrations are generated in the same way.
 
