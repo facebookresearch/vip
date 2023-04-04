@@ -65,10 +65,10 @@ class VIP(nn.Module):
         self.encoder_opt = torch.optim.Adam(params, lr = lr)
 
     ## Forward Call (im --> representation)
-    def forward(self, obs, obs_shape = [3, 224, 224]):
+    def forward(self, obs):
         obs_shape = obs.shape[1:]
         # if not already resized and cropped, then add those in preprocessing
-        if obs_shape != [3, 224, 224]:
+        if obs_shape != (3, 224, 224):
             preprocess = nn.Sequential(
                         transforms.Resize(256),
                         transforms.CenterCrop(224),
