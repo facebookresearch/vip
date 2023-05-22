@@ -44,6 +44,7 @@ This should generate the following plots in `vip/examples/embedding_curves/`:
 <img src="vip/assets/pickplace_melon.png" width="200">
 <img src="vip/assets/fold_towel.png" width="200">
 </p>
+
 We also include an example for generating animated embedding distance curves for VIP and other models. You can try it here:
 ```
 cd vip/examples
