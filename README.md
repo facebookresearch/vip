@@ -53,9 +53,9 @@ python plot_reward_curves_video.py
 This should generate the following plots (and more!) in `vip/examples/embedding_curves/`:
 
 <p float="left">
-<img src="vip/assets/fold_towel_vip.gif" width="300">
-<img src="vip/assets/task_hammer_vip.gif" width="300">
-<img src="vip/assets/kitchen_sdoor_open-v3_vip.gif" width="300">
+<img src="vip/assets/fold_towel_vip.gif" width="250">
+<img src="vip/assets/task_hammer_vip.gif" width="250">
+<img src="vip/assets/kitchen_sdoor_open-v3_vip.gif" width="250">
 </p>
 
 In addition to this official repository, VIP has also been incorporated into [TorchRL](https://github.com/pytorch/rl) as an out-of-box visual representation for any Gym environment. After you install TorchRL, using VIP is as simple as:
