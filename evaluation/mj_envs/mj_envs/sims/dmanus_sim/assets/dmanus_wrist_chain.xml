@@ -1,0 +1,25 @@
+<mujocoinclude>
+
+  <body name="wrist_base" childclass="dhand">
+      <!-- <geom name="X430W1" type="box" pos="0 0 0.02325" size="0.01425 0.017 0.02325" class="col_dhand"/> -->
+      <geom name="X430W1_mesh" mesh="X430" class="viz_dhand"/>
+
+        <body name="wrist_LR" pos="0 0 0.03525">
+            <geom mesh="FR121" pos="0 0 0" class="viz_dhand"/>
+            <geom type="box" pos="0 0 0.01305" size="0.012 0.0205 0.01505" class="col_dhand"/>
+            <geom mesh="FR121" pos="0 0 0.0560" class="viz_dhand" euler="0 3.14 1.57"/>
+            <geom type="box"   pos="0 0 0.0430" size="0.012 0.0205 0.01505" euler="0 3.14 1.57" class="col_dhand"/>
+            <joint name="WJLR" type="hinge" pos="0 0 0" axis="0 1 0" limited="true" range="-0.52 0.52"/>
+
+            <body name="wrist_UD" pos="0 0 0.056">
+                <geom mesh="X430" pos="0 0 0.03525" euler="0 3.14 -1.57" class="viz_dhand"/>
+                <geom type="box" pos="0 0 0.012" euler="0 3.14 1.57" size="0.01425 0.017 0.02325" class="col_dhand"/>
+                <joint name="WJUD" type="hinge" pos="0 0 0" axis="1 0 0" limited="true" range="-0.785 0.785"/>
+
+                <include file="assets/dmanus_chain.xml"/>
+
+            </body>
+        </body>
+   </body>
+
+</mujocoinclude>

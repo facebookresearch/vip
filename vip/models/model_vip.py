@@ -79,7 +79,8 @@ class VIP(nn.Module):
                         self.normlayer,
                 )
         ## Input must be [0, 255], [3,224,224]
-        obs = obs.float() /  255.0
+        if torch.max(obs) > 2.0:
+            obs = obs.float() /  255.0
         obs_p = preprocess(obs)
         h = self.convnet(obs_p)
         return h

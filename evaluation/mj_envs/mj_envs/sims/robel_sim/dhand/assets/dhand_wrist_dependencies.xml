@@ -1,0 +1,23 @@
+<mujocoinclude>
+<!--
+ ~ Copyright 2019 The ROBEL Authors.
+ ~
+ ~ Licensed under the Apache License, Version 2.0 (the "License");
+ ~ you may not use this file except in compliance with the License.
+ ~ You may obtain a copy of the License at
+ ~
+ ~     http://www.apache.org/licenses/LICENSE-2.0
+ ~
+ ~ Unless required by applicable law or agreed to in writing, software
+ ~ distributed under the License is distributed on an "AS IS" BASIS,
+ ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ ~ See the License for the specific language governing permissions and
+ ~ limitations under the License.
+ -->
+ 
+  <actuator>
+    <position joint="WR_ADB" class="WR" name="WR_ADB" ctrlrange="-0.436 0.436"/>
+    <position joint="WR_UD" class="WR" name="WR_UD" ctrlrange="-0.436 0.436"/>
+  </actuator>
+</mujocoinclude>
+

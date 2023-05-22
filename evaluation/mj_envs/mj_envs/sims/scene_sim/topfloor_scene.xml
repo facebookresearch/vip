@@ -1,0 +1,67 @@
+<mujoco model="topflor scene">
+<!-- =================================================
+    Copyright 2020 Vikash Kumar
+    Model   :: Top Floor Scene (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com)
+    source  :: https://github.com/vikashplus/scene_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -->
+
+  <asset>
+    <!-- <texture name="skybox" type="skybox" builtin="gradient" rgb1=".08 .09 .10" rgb2="0 0 0" width="800" height="800" mark="random" markrgb=".8 .8 .8"/> -->
+    <texture name="skybox" type="skybox" gridsize="3 4" gridlayout=".U..LFRB.D.." file="../scene_sim/textures/dawn.png"/>
+    <texture name="texplane" type="2d" height="1" width="1" file="../scene_sim/textures/white_marble_tile2.png"/>
+    <texture name="texwindow" type="2d" height="1" width="1" file="../scene_sim/textures/windows0.png"/>
+
+    <material name="MatPlane" reflectance="0.01" texture="texplane" texrepeat="4 4" texuniform="true"/>
+    <material name="MatMetal" reflectance="0" specular=".2" emission=".01" rgba=".31 .3 .3 1"/>
+    <material name="MatGlass" reflectance="1" specular=".4" emission=".25" rgba=".6 .6 .65 .1"/>
+    <material name="MatWindow" reflectance="0" texture="texwindow" texrepeat="1 1" texuniform="true" rgba="1 0 0 1"/>
+
+    <mesh name="wall" file="../scene_sim/meshes/highwindow.stl" scale="1 1 1"/>
+    <mesh name="skyline" file="../scene_sim/meshes/skyline.stl" scale="2.2 2.2 1"/>
+    <mesh name="robohive" file="../scene_sim/meshes/robohive.stl"/>
+  </asset>
+
+  <compiler angle="radian"/>
+  <statistic extent="3.5"/>
+
+  <visual>
+    <map fogstart="1.5" fogend="5" force="0.1" znear="0.01" shadowclip="2"/>
+    <quality shadowsize="4096" offsamples="4"/>
+  </visual>
+
+  <default>
+    <default class='scene'>
+      <geom contype="0" conaffinity="0"/>
+    </default>
+  </default>
+
+  <worldbody>
+    <!-- indoor lights -->
+    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="-4 -4 7" dir="1 1 -1"/>
+    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="4 -4 7" dir="-1 1 -1"/>
+    <light directional="false" diffuse=".4 .35 .3" specular="0.4 0.35 0.3" pos="0 4 7" dir="0 -1 -1"/>
+
+    <!-- floor, roof and outside -->
+    <geom class='scene' name="skyline" mesh="skyline" pos="0 0 -3" type="mesh" rgba=".3 .3 .27 1" euler="0 0 0" material="MatWindow"/>
+    <geom class='scene' name="floor" pos="0 0 0.0001" size="12 12 .1" conaffinity="1" contype="1" type="plane" material="MatPlane" condim="3"/>
+    <geom class='scene' name="roof" type="plane" pos="0 0 8" size="12 12 .2" material="MatMetal" euler="3.14 0 0" contype="0" conaffinity="0"/>
+    <geom name="robohive" type="mesh" mesh="robohive" conaffinity="0" contype="0" rgba=".3 .3 .3 1"/>
+
+    <!-- walls -->
+    <geom class='scene' mesh="wall" pos="0 10 0" type="mesh" material="MatMetal"/>
+    <geom class='scene' type="box" pos="0 10 3.5" size="5 .01 3.5" material="MatGlass"/>
+    <geom class='scene' mesh="wall" pos="0 -10 0" type="mesh" material="MatMetal" euler="0 0 -3.14"/>
+    <geom class='scene' type="box" pos="0 -10 3.5" size="5 .01 3.5" material="MatGlass"/>
+    <geom class='scene' mesh="wall" pos="10 0 0" type="mesh" material="MatMetal" euler="0 0 -1.57"/>
+    <geom class='scene' type="box" pos="10 0 3.5" size=".01 5 3.5" material="MatGlass"/>
+    <geom class='scene' mesh="wall" pos="-10 0 0" type="mesh" material="MatMetal" euler="0 0 1.57"/>
+    <geom class='scene' type="box" pos="-10 0 3.5" size=".01 5 3.5" material="MatGlass"/>
+
+    <!-- co-ordinate axis -->
+    <site name="xaxis" fromto="0 0 0 1 0 0" size=".005" type="capsule" rgba="1 0 0 .25" group="3"/>
+    <site name="yaxis" fromto="0 0 0 0 1 0" size=".005" type="capsule" rgba="0 1 0 .25" group="3"/>
+  </worldbody>
+
+</mujoco>

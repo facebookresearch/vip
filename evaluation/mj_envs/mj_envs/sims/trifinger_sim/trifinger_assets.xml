@@ -1,0 +1,47 @@
+<mujocoinclude>
+<!-- =================================================
+    Copyright 2022 Vikash Kumar
+    Model   :: TriFinger (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com)
+    Details :: https://github.com/vikashplus/trifinger_sim
+    Acknoledgement :: Model details from https://github.com/rr-learning/CausalWorld
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+
+    <compiler angle="radian"/>
+
+    <asset>
+        <mesh name="center_axis_sim" file="../trifinger_sim/meshes/center_axis_sim.stl" />
+        <mesh name="prox-sim" file="../trifinger_sim/meshes/prox-sim.stl" />
+        <mesh name="motor_sim" file="../trifinger_sim/meshes/motor_sim.stl" />
+        <mesh name="int_sim" file="../trifinger_sim/meshes/int_sim.stl" />
+        <mesh name="tip_link_sim" file="../trifinger_sim/meshes/tip_link_sim.stl" />
+        <mesh name="tip_sim" file="../trifinger_sim/meshes/tip_sim.stl" />
+        <!-- <mesh name="high_table_boundary" file="../trifinger_sim/meshes/high_table_boundary.stl" /> -->
+    </asset>
+
+    <default>
+        <default class="trifinger">
+            <joint damping="2" frictionloss="2" armature=".01" limited="true"/>
+            <geom conaffinity="0" contype="0" group="0" type="mesh" rgba="0.904 0.864 0.861 1"/>
+            <default class="trifinger_col">
+                <geom conaffinity="1" contype="1" condim="3" group="3" margin="0.001" rgba=".4 .5 .6 1"/>
+            </default>
+        </default>
+    </default>
+
+   <actuator>
+        <position joint="finger_base_to_upper_joint_0" name="finger_base_to_upper_joint_0" kp="20" ctrllimited="true" ctrlrange="-0.33 1"/>
+        <position joint="finger_upper_to_middle_joint_0" name="finger_upper_to_middle_joint_0" kp="20" ctrllimited="true" ctrlrange="0 1.57"/>
+        <position joint="finger_middle_to_lower_joint_0" name="finger_middle_to_lower_joint_0" kp="20" ctrllimited="true" ctrlrange="-2.7 0"/>
+
+        <position joint="finger_base_to_upper_joint_120" name="finger_base_to_upper_joint_120" kp="20" ctrllimited="true" ctrlrange="-0.33 1"/>
+        <position joint="finger_upper_to_middle_joint_120" name="finger_upper_to_middle_joint_120" kp="20" ctrllimited="true" ctrlrange="0 1.57"/>
+        <position joint="finger_middle_to_lower_joint_120" name="finger_middle_to_lower_joint_120" kp="20" ctrllimited="true" ctrlrange="-2.7 0"/>
+
+        <position joint="finger_base_to_upper_joint_240" name="finger_base_to_upper_joint_240" kp="20" ctrllimited="true" ctrlrange="-0.33 1"/>
+        <position joint="finger_upper_to_middle_joint_240" name="finger_upper_to_middle_joint_240" kp="20" ctrllimited="true" ctrlrange="0 1.57"/>
+        <position joint="finger_middle_to_lower_joint_240" name="finger_middle_to_lower_joint_240" kp="20" ctrllimited="true" ctrlrange="-2.7 0"/>
+    </actuator>
+
+</mujocoinclude>

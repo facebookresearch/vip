@@ -107,8 +107,9 @@ def main(reps):
         plt.savefig(f"embedding_curves/{task_name}.png",bbox_inches='tight')
         plt.close()
 
+        
            
 if __name__ == '__main__':
-    reps = ['vip', 'resnet']
+    reps = ['vip', 'resnet', 'r3m']
     # reps = ['vip', 'r3m', 'resnet'] # requires installing r3m
     main(reps)

@@ -1,0 +1,7 @@
+<mujocoinclude model="apple">
+
+    <geom name="apple_visual" mesh="apple"/>
+    <geom name="apple_contact0" mesh="contact0" class="object_col"/>
+    <geom name="apple_contact1" mesh="contact1" class="object_col"/>
+
+</mujocoinclude>

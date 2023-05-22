@@ -1,0 +1,36 @@
+<mujocoinclude>
+  <!-- WRIST BASE ROTATE 1 -->
+  <body euler="-1.57 0 0" name="wrist" pos="0 .16 0.394" childclass="dHand">
+    <geom euler="1.57 0 1.57" mesh="H-540" pos="0 0 0.037"/>
+    <geom material="visual_chrome" mesh="wristmount" pos="0 0 0.026"/>
+    <geom pos="0 0 -0.01" size="0.04 0.009" type="cylinder"/>
+    <geom class="phys_metal" pos="0 0 0.037" size="0.017 0.023 0.03" type="box" mass=".183"/>
+    <geom class="phys_metal" pos="0 0 -0.01" size="0.04 0.009" type="cylinder" mass=".03"/>
+    <geom class="phys_metal" pos="0 0 0.004" size="0.033 0.023 0.004" type="box" mass=".045"/>
+    <geom class="phys_metal" pos="0.02 0 0.031" size="0.004 0.023 0.024" type="box" mass=".04"/>
+    <geom class="phys_metal" pos="-0.02 0 0.031" size="0.004 0.023 0.024" type="box" mass=".04"/>
+    <!-- WRIST AD-AB -->
+    <body name="wrist-adb" pos="0 0 0.052">
+      <joint axis="0 1 0" name="WR_ADB" range="-0.436 0.436" class="WR"/>
+      <geom material="visual_chrome" euler="-1.57 0 -1.57" mesh="wristbracket1" pos="0 0.024 0.016"/>
+      <geom material="visual_chrome" euler="1.57 0 1.57" mesh="wristbracket1" pos="0 -0.024 0.016"/>
+      <geom material="visual_chrome" mesh="wristbracket2" pos="0 0 0.043"/>
+      <!-- <geom class="phys_metal" pos="0 0.027 0.016" size="0.017 0.003 0.019" type="box" mass=".01"/> -->
+      <!-- <geom class="phys_metal" pos="0 -0.027 0.016" size="0.017 0.003 0.019" type="box" mass=".01"/> -->
+      <geom class="phys_metal" pos="0 0 0.029" size="0.029 0.026 0.006" type="box" mass=".053"/>
+      <geom class="phys_metal" pos="-0.026 0 0.049" size="0.002 0.014 0.014" type="box" mass=".03"/>
+      <geom class="phys_metal" pos="0.026 0 0.049" size="0.003 0.014 0.014" type="box" mass=".03"/>
+      <!-- WRIST Up-Down -->
+      <body name="wrist-ud" pos="0 0 0.05" childclass="dHand">
+        <joint axis="1 0 0" name="WR_UD" range="-0.436 0.436" class="WR"/>
+        <geom euler="3.14 1.57 0" mesh="H-540" pos="0 0 0.025"/>
+        <geom class="phys_metal" pos="0 0 0.024" euler="0 0 1.57" size="0.017 0.023 0.03" type="box" mass=".183" conaffinity="0" contype="0"/>
+
+<!-- include D'Hand begin-->
+<include file="../../robel_sim/dhand/assets/dhand_chain.xml"/>
+<!-- include D'Hand end-->
+
+      </body>
+    </body>
+  </body>
+</mujocoinclude>

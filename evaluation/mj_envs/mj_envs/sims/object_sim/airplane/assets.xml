@@ -1,0 +1,21 @@
+<mujocoinclude model="">
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: Objects (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Sudeep Dasari (sdasari@andrew.cmu.edu )
+    Details :: https://github.com/vikashplus/object_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+    <asset>
+        <mesh name="airplane" file="../object_sim/airplane/airplane.stl"/>
+        <mesh name="contact0" file="../object_sim/airplane/contact0.stl"/>
+        <mesh name="contact1" file="../object_sim/airplane/contact1.stl"/>
+        <mesh name="contact2" file="../object_sim/airplane/contact2.stl"/>
+        <mesh name="contact3" file="../object_sim/airplane/contact3.stl"/>
+        <mesh name="contact4" file="../object_sim/airplane/contact4.stl"/>
+        <mesh name="contact5" file="../object_sim/airplane/contact5.stl"/>
+        <mesh name="contact6" file="../object_sim/airplane/contact6.stl"/>
+        <mesh name="contact7" file="../object_sim/airplane/contact7.stl"/>
+    </asset>
+
+</mujocoinclude>

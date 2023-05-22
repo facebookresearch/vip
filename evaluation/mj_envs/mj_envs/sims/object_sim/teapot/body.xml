@@ -1,0 +1,51 @@
+<mujocoinclude model="">
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: Objects (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Sudeep Dasari (sdasari@andrew.cmu.edu )
+    Details :: https://github.com/vikashplus/object_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+    <geom name="teapot_visual" mesh="teapot"/>
+    <geom name="teapot_contact0" mesh="contact0" class="object_col"/>
+    <geom name="teapot_contact1" mesh="contact1" class="object_col"/>
+    <geom name="teapot_contact2" mesh="contact2" class="object_col"/>
+    <geom name="teapot_contact3" mesh="contact3" class="object_col"/>
+    <geom name="teapot_contact4" mesh="contact4" class="object_col"/>
+    <geom name="teapot_contact5" mesh="contact5" class="object_col"/>
+    <geom name="teapot_contact6" mesh="contact6" class="object_col"/>
+    <geom name="teapot_contact7" mesh="contact7" class="object_col"/>
+    <geom name="teapot_contact8" mesh="contact8" class="object_col"/>
+    <geom name="teapot_contact9" mesh="contact9" class="object_col"/>
+    <geom name="teapot_contact10" mesh="contact10" class="object_col"/>
+    <geom name="teapot_contact11" mesh="contact11" class="object_col"/>
+    <geom name="teapot_contact12" mesh="contact12" class="object_col"/>
+    <geom name="teapot_contact13" mesh="contact13" class="object_col"/>
+    <geom name="teapot_contact14" mesh="contact14" class="object_col"/>
+    <geom name="teapot_contact15" mesh="contact15" class="object_col"/>
+    <geom name="teapot_contact16" mesh="contact16" class="object_col"/>
+    <geom name="teapot_contact17" mesh="contact17" class="object_col"/>
+    <geom name="teapot_contact18" mesh="contact18" class="object_col"/>
+    <geom name="teapot_contact19" mesh="contact19" class="object_col"/>
+    <geom name="teapot_contact20" mesh="contact20" class="object_col"/>
+    <geom name="teapot_contact21" mesh="contact21" class="object_col"/>
+    <geom name="teapot_contact22" mesh="contact22" class="object_col"/>
+    <geom name="teapot_contact23" mesh="contact23" class="object_col"/>
+    <geom name="teapot_contact24" mesh="contact24" class="object_col"/>
+    <geom name="teapot_contact25" mesh="contact25" class="object_col"/>
+    <geom name="teapot_contact26" mesh="contact26" class="object_col"/>
+    <geom name="teapot_contact27" mesh="contact27" class="object_col"/>
+    <geom name="teapot_contact28" mesh="contact28" class="object_col"/>
+    <geom name="teapot_contact29" mesh="contact29" class="object_col"/>
+    <geom name="teapot_contact30" mesh="contact30" class="object_col"/>
+    <geom name="teapot_contact31" mesh="contact31" class="object_col"/>
+    <geom name="teapot_contact32" mesh="contact32" class="object_col"/>
+    <geom name="teapot_contact33" mesh="contact33" class="object_col"/>
+    <geom name="teapot_contact34" mesh="contact34" class="object_col"/>
+    <geom name="teapot_contact35" mesh="contact35" class="object_col"/>
+    <geom name="teapot_contact36" mesh="contact36" class="object_col"/>
+    <geom name="teapot_contact37" mesh="contact37" class="object_col"/>
+    <geom name="teapot_contact38" mesh="contact38" class="object_col"/>
+    <geom name="teapot_contact39" mesh="contact39" class="object_col"/>
+    <geom name="teapot_contact40" mesh="contact40" class="object_col"/>
+</mujocoinclude>

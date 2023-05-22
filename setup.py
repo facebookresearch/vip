@@ -38,6 +38,7 @@ setup(
     'scikit-video',
     'transforms3d',
     'moviepy',
-    'termcolor', 
+    'termcolor',
+    'wandb' 
     ]
 )

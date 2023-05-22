@@ -1,0 +1,16 @@
+<mujoco>
+
+    <include file="assets/dmanus_wrist_assets.xml"/>
+    <include file="assets/dmanus_assets.xml"/>
+
+    <worldbody>
+
+        <light diffuse="0.4 0.4 0.4" pos="0 0 3" dir="0 0 -1"/>
+        <geom type="plane" pos="0 0 -0.15" size="0.5 0.5 1" rgba="0.4 0.3 0.4 1"/>
+
+        <body name="stand" pos="0 -0.2 0.05" euler="-1.57 0 0">
+            <include file="assets/dmanus_wrist_chain.xml"/>
+        </body>
+
+    </worldbody>
+</mujoco>

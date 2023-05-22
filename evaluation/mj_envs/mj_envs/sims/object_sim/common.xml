@@ -1,0 +1,30 @@
+<mujoco>
+    <compiler angle="radian" />
+
+    <asset>
+        <material name="MatObject" specular="0.75" shininess="0.1" reflectance="0.5" rgba="0.9 0.7 0.5 1" />
+    </asset>
+
+    <default>
+        <!-- <mesh scale="0.001 0.001 0.001" /> -->
+        <default class="grab">
+            <joint limited="false" margin="0.01" armature="0.001" damping="0" frictionloss="0.001" />
+            <geom type="mesh"  rgba=".8 .2 .2 1.0"/>
+            <site size="0.005 0 0" rgba="0.4 0.9 0.4 1" />
+            <!-- <general ctrllimited="true" ctrlrange="-1 1" /> -->
+            <!-- <tendon limited="true" /> -->
+            <default class="object_col">
+                <geom type="mesh" density="1250" friction="1 0.5 0.01" margin="0.0005" condim="4" rgba=".3 .4 .5 1" group="3"/>
+            </default>
+        </default>
+    </default>
+
+    <visual>
+        <!-- free camera attributes -->
+        <global fovy="25" />
+    </visual>
+
+    <worldbody>
+        <geom type="plane" size="1 1 .1" pos="0 0 -.06"/>
+    </worldbody>
+</mujoco>

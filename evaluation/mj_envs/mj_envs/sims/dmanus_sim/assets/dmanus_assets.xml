@@ -1,0 +1,60 @@
+<mujocoinclude>
+    <compiler angle="radian" meshdir="."/>
+    <asset>
+        <mesh name="X430" file="../dmanus_sim/meshes/highres/X430.stl" scale="1 1 1"/>
+        <mesh name="FR121" file="../dmanus_sim/meshes/highres/FR121.stl" scale="1 1 1"/>
+        <mesh name="FR123" file="../dmanus_sim/meshes/highres/FR123.stl" scale="1 1 1"/>
+        <mesh name="skeleton" file="../dmanus_sim/meshes/highres/skeleton.stl" scale="1 1 1"/>
+        <mesh name="fingertip" file="../dmanus_sim/meshes/highres/fingertip.stl" scale="1 1 1"/>
+        <mesh name="plate" file="../dmanus_sim/meshes/highres/plate.stl" scale="1 1 1"/>
+        <mesh name="covering" file="../dmanus_sim/meshes/highres/covering.stl" scale="1 1 1"/>
+        <mesh name="thumb_cover" file="../dmanus_sim/meshes/highres/thumb_cover.stl" scale="1 1 1"/>
+        <mesh name="PalmC" file="../dmanus_sim/meshes/convex/PalmC.stl" scale="1 1 1"/>
+        <mesh name="fingertipc" file="../dmanus_sim/meshes/convex/fingertipc.stl" scale="1 1 1"/>
+        <mesh name="PalmR" file="../dmanus_sim/meshes/convex/PalmR.stl" scale="1 1 1"/>
+        <mesh name="PalmL1" file="../dmanus_sim/meshes/convex/PalmL1.stl" scale="1 1 1"/>
+        <mesh name="PalmL2" file="../dmanus_sim/meshes/convex/PalmL2.stl" scale="1 1 1"/>
+    </asset>
+
+    <default>
+        <default class="dhand">
+            <joint damping="5"/>
+            <position ctrllimited="true"/>
+            <default class="viz_dhand">
+                <geom type="mesh" group="1" rgba="0.25 0.25 0.25 1" contype="0" conaffinity="0"/>
+                <site group="1"/>
+            </default>
+
+            <default class="col_dhand">
+                <geom contype="0" conaffinity="1" condim="4" group="3" margin="0.0005" rgba="0.4 0.5 0.6 1"/>
+                <site group="0"/>
+            </default>
+
+        </default>
+    </default>
+
+    <actuator>
+        <position joint="TFJ1" name="TFA1" kp="100" ctrllimited="true" ctrlrange="-1.3 0.75"/>
+        <position joint="TFJ2" name="TFA2" kp="100" ctrllimited="true" ctrlrange="-0.65 2.14"/>
+        <position joint="TFJ3" name="TFA3" kp="100" ctrllimited="true" ctrlrange="0.0 2.0"/>
+        <position joint="IFJ1" name="IFA1" kp="100" ctrllimited="true" ctrlrange="-0.75 0.75"/>
+        <position joint="IFJ2" name="IFA2" kp="100" ctrllimited="true" ctrlrange="0.0 2.14"/>
+        <position joint="IFJ3" name="IFA3" kp="100" ctrllimited="true" ctrlrange="0.0 2.0"/>
+        <position joint="LFJ1" name="LFA1" kp="100" ctrllimited="true" ctrlrange="-0.75 0.75"/>
+        <position joint="LFJ2" name="LFA2" kp="100" ctrllimited="true" ctrlrange="0.0 2.14"/>
+        <position joint="LFJ3" name="LFA3" kp="100" ctrllimited="true" ctrlrange="0.0 2.0"/>
+    </actuator>
+
+    <sensor>
+        <jointpos name="TFJ1" joint="TFJ1"/>
+        <jointpos name="TFJ2" joint="TFJ2"/>
+        <jointpos name="TFJ3" joint="TFJ3"/>
+        <jointpos name="IFJ1" joint="IFJ1"/>
+        <jointpos name="IFJ2" joint="IFJ2"/>
+        <jointpos name="IFJ3" joint="IFJ3"/>
+        <jointpos name="LFJ1" joint="LFJ1"/>
+        <jointpos name="LFJ2" joint="LFJ2"/>
+        <jointpos name="LFJ3" joint="LFJ3"/>
+    </sensor>
+
+</mujocoinclude>

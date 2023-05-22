@@ -1,0 +1,20 @@
+<mujocoinclude>
+<!-- ======================================================
+    Model 		:: Sawyer (MuJoCoV2.0)
+    Author      :: Vikash Kumar
+        Contacts 	: vikashplus@gmail.com
+        Last edits 	: 3Apr'20, 25Aug'18
+    Copyright 2018 Vikash Kumar
+        Licensed under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -->
+    <equality>
+        <weld body1="mocap" body2="right_ee_attchment" solref="0.01 1" solimp=".25 .25 0.001"/>
+    </equality>
+
+    <worldbody>
+        <body mocap="true" name="mocap" pos="1 .15 1.25">
+            <geom type="mesh" contype="0" conaffinity="0" group="1" rgba="1.0 0.5 0.5 .1" mesh="l6" euler="2.95 1.57 0" pos="-0.01 .01 .017"/>
+        </body>
+    </worldbody>
+
+</mujocoinclude>

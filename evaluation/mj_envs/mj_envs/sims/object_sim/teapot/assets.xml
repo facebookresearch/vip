@@ -1,0 +1,53 @@
+<mujocoinclude model="">
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: Objects (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Sudeep Dasari (sdasari@andrew.cmu.edu )
+    Details :: https://github.com/vikashplus/object_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+    <asset>
+        <mesh name="teapot" file="../object_sim/teapot/teapot.stl"/>
+        <mesh name="contact0" file="../object_sim/teapot/contact0.stl"/>
+        <mesh name="contact1" file="../object_sim/teapot/contact1.stl"/>
+        <mesh name="contact2" file="../object_sim/teapot/contact2.stl"/>
+        <mesh name="contact3" file="../object_sim/teapot/contact3.stl"/>
+        <mesh name="contact4" file="../object_sim/teapot/contact4.stl"/>
+        <mesh name="contact5" file="../object_sim/teapot/contact5.stl"/>
+        <mesh name="contact6" file="../object_sim/teapot/contact6.stl"/>
+        <mesh name="contact7" file="../object_sim/teapot/contact7.stl"/>
+        <mesh name="contact8" file="../object_sim/teapot/contact8.stl"/>
+        <mesh name="contact9" file="../object_sim/teapot/contact9.stl"/>
+        <mesh name="contact10" file="../object_sim/teapot/contact10.stl"/>
+        <mesh name="contact11" file="../object_sim/teapot/contact11.stl"/>
+        <mesh name="contact12" file="../object_sim/teapot/contact12.stl"/>
+        <mesh name="contact13" file="../object_sim/teapot/contact13.stl"/>
+        <mesh name="contact14" file="../object_sim/teapot/contact14.stl"/>
+        <mesh name="contact15" file="../object_sim/teapot/contact15.stl"/>
+        <mesh name="contact16" file="../object_sim/teapot/contact16.stl"/>
+        <mesh name="contact17" file="../object_sim/teapot/contact17.stl"/>
+        <mesh name="contact18" file="../object_sim/teapot/contact18.stl"/>
+        <mesh name="contact19" file="../object_sim/teapot/contact19.stl"/>
+        <mesh name="contact20" file="../object_sim/teapot/contact20.stl"/>
+        <mesh name="contact21" file="../object_sim/teapot/contact21.stl"/>
+        <mesh name="contact22" file="../object_sim/teapot/contact22.stl"/>
+        <mesh name="contact23" file="../object_sim/teapot/contact23.stl"/>
+        <mesh name="contact24" file="../object_sim/teapot/contact24.stl"/>
+        <mesh name="contact25" file="../object_sim/teapot/contact25.stl"/>
+        <mesh name="contact26" file="../object_sim/teapot/contact26.stl"/>
+        <mesh name="contact27" file="../object_sim/teapot/contact27.stl"/>
+        <mesh name="contact28" file="../object_sim/teapot/contact28.stl"/>
+        <mesh name="contact29" file="../object_sim/teapot/contact29.stl"/>
+        <mesh name="contact30" file="../object_sim/teapot/contact30.stl"/>
+        <mesh name="contact31" file="../object_sim/teapot/contact31.stl"/>
+        <mesh name="contact32" file="../object_sim/teapot/contact32.stl"/>
+        <mesh name="contact33" file="../object_sim/teapot/contact33.stl"/>
+        <mesh name="contact34" file="../object_sim/teapot/contact34.stl"/>
+        <mesh name="contact35" file="../object_sim/teapot/contact35.stl"/>
+        <mesh name="contact36" file="../object_sim/teapot/contact36.stl"/>
+        <mesh name="contact37" file="../object_sim/teapot/contact37.stl"/>
+        <mesh name="contact38" file="../object_sim/teapot/contact38.stl"/>
+        <mesh name="contact39" file="../object_sim/teapot/contact39.stl"/>
+        <mesh name="contact40" file="../object_sim/teapot/contact40.stl"/>
+    </asset>
+</mujocoinclude>

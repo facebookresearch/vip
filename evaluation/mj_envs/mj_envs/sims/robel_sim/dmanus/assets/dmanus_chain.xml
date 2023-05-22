@@ -1,0 +1,117 @@
+<mujocoinclude>
+<!-- =================================================
+    Copyright 2019 Vikash Kumar
+    Model   :: D'Manus (MuJoCoV2.0)
+    Author  :: Vikash Kumar (vikashplus@gmail.com), Michael Wu (michael50wu@gmail.com)
+    Details :: https://github.com/vikashplus/robel_sim
+    License :: Under Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+====================================================== -©vk©-->
+        <body name="palm" pos="0 0 0.01" childclass="dmanus">
+          <geom name="palmFull" mesh="PalmFull" rgba="1 1 1 1" pos="-0.001 0 0.1032"/>
+          <geom name="Palmcenter" type="mesh" mesh="PalmC" pos="-0.001 0 0.1032" class="phys_metal"/>
+          <geom name="Palmright" type="mesh" mesh="PalmR" pos="-0.001 0 0.1032" class="phys_metal"/>
+          <geom name="Palmleft1" type="mesh" mesh="PalmL1" pos="-0.001 0 0.1032" class="phys_metal"/>
+          <geom name="Palmleft2" type="mesh" mesh="PalmL2" pos="-0.001 0 0.1032" class="phys_metal"/>
+
+          <!--Plate-->
+          <geom name="plate1_mesh" mesh="plate" pos="0 -0.0255 0.1032"/>
+          <geom name="plate2_mesh" mesh="plate" pos="0 0.0235 0.1032"/>
+
+          <!-- THUMB FINGER -->
+          <body name="thumb_finger" pos="0.0343 0.0015 0.027" euler="0 1.92 0">
+            <geom euler="1.57 0 1.57" mesh="motor" pos="0 0 0.025"/>
+            <body name="TF_metacarpel" euler="0 0.0 0" pos="0 0 0.03475">
+              <joint axis="0 1 0" name="TF_ADB" class="ADB"/>
+              <geom euler="-1.57 3.14 -1.57" mesh="knuckle"/>
+              <geom euler="1.57 -1.57 0" mesh="motor" pos="0 0 0.037"/>
+              <geom class="phys_metal" pos="0 0 0.021" size="0.015 0.021 0.002" type="box" mass=".003"/>
+              <geom class="phys_metal" pos="0 0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 -0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 0.003 0.037" size="0.018 0.024 0.015" type="box" mass=".086"/>
+              <body name="TF_proximal" pos="0 -0.009 0.037">
+                <joint axis="1 0 0" name="TF_MCP" class="MCP"/>
+                <geom euler="0 -1.57 0" mesh="bracket2" pos="-0.018 0 0.012"/>
+                <geom euler="0 1.57 3.14" mesh="bracket2" pos="0.018 0 0.012"/>
+                <geom euler="0 -1.57 0" mesh="motor" pos="0 0 0.0445"/>
+                <geom class="phys_metal" pos="0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="-0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="0 0 0.041" size="0.018 0.015 0.024" type="box" mass=".086"/>
+
+                <body name="TF_middle" pos="0 0 0.053">
+                  <joint axis="1 0 0" name="TF_PIP" class="MCP"/>
+                  <geom euler="0 -1.57 0" mesh="bracket2" pos="-0.018 0 0.012"/>
+                  <geom euler="0 1.57 3.14" mesh="bracket2" pos="0.018 0 0.012"/>
+                  <geom euler="0 -1.57 0" mesh="motor" pos="0 0 0.0445"/>
+                  <geom class="phys_metal" pos="0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                  <geom class="phys_metal" pos="-0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                  <geom class="phys_metal" pos="0 0 0.041" size="0.018 0.015 0.024" type="box" mass=".086"/>
+
+                  <body name="TF_distal" pos="0 0 0.054">
+                    <joint axis="1 0 0" name="TF_DIP" class="PIP"/>
+                    <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0"/>
+                    <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0" class="phys_metal"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+
+          <!-- INDEX/FIRST FINGER -->
+          <body name="index_proximal" pos="0.0445 0.002 0.06325">
+            <geom euler="1.57 0 1.57" mesh="motor" pos="0 0 0.025"/>
+            <body name="FF_metacarpel" euler="0 0.0 0" pos="0 0 0.03475">
+              <joint axis="0 1 0" name="FF_ADB" class="ADB"/>
+              <geom euler="-1.57 3.14 -1.57" mesh="knuckle"/>
+              <geom euler="1.57 -1.57 0" mesh="motor" pos="0 0 0.037"/>
+              <geom class="phys_metal" pos="0 0 0.021" size="0.015 0.021 0.002" type="box" mass=".003"/>
+              <geom class="phys_metal" pos="0 0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 -0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 0.003 0.037" size="0.018 0.024 0.015" type="box" mass=".086"/>
+              <body name="FF_proximal" pos="0 -0.009 0.037">
+                <joint axis="1 0 0" name="FF_MCP" class="MCP"/>
+                <geom euler="0 -1.57 0" mesh="bracket2" pos="-0.018 0 0.012"/>
+                <geom euler="0 1.57 3.14" mesh="bracket2" pos="0.018 0 0.012"/>
+                <geom euler="0 -1.57 0" mesh="motor" pos="0 0 0.0445"/>
+                <geom class="phys_metal" pos="0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="-0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="0 0 0.041" size="0.018 0.015 0.024" type="box" mass=".086"/>
+                <body name="FF_middle" pos="0 0 0.054">
+                  <joint axis="1 0 0" name="FF_PIP" class="PIP"/>
+                  <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0"/>
+                  <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0" class="phys_metal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+
+          <!-- PINKY FINGER -->
+          <body name="pinky_finger" pos="-.0445 0.002 0.06325">
+            <geom euler="1.57 0 1.57" mesh="motor" pos="0 0 0.025"/>
+            <body name="PF_metacarpel" euler="0 0.0 0" pos="0 0 0.03475">
+              <joint axis="0 1 0" name="PF_ADB" class="ADB"/>
+              <geom euler="-1.57 3.14 -1.57" mesh="knuckle"/>
+              <geom euler="1.57 -1.57 0" mesh="motor" pos="0 0 0.037"/>
+              <geom class="phys_metal" pos="0 0 0.021" size="0.015 0.021 0.002" type="box" mass=".003"/>
+              <geom class="phys_metal" pos="0 0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 -0.02 0.01" size="0.015 0.001 0.014" type="box" mass=".001"/>
+              <geom class="phys_metal" pos="0 0.003 0.037" size="0.018 0.024 0.015" type="box" mass=".086"/>
+              <body name="PF_proximal" pos="0 -0.009 0.037">
+                <joint axis="1 0 0" name="PF_MCP" class="MCP"/>
+                <geom euler="0 -1.57 0" mesh="bracket2" pos="-0.018 0 0.012"/>
+                <geom euler="0 1.57 3.14" mesh="bracket2" pos="0.018 0 0.012"/>
+                <geom euler="0 -1.57 0" mesh="motor" pos="0 0 0.0445"/>
+                <geom class="phys_metal" pos="0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="-0.02 0 0.012" size="0.0015 0.015 0.014" type="box" mass=".003"/>
+                <geom class="phys_metal" pos="0 0 0.041" size="0.018 0.015 0.024" type="box" mass=".086"/>
+                <body name="PF_middle" pos="0 0 0.054">
+                  <joint axis="1 0 0" name="PF_PIP" class="PIP"/>
+                  <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0"/>
+                  <geom euler="-1.57 1.57 0" mesh="fingertip" pos="0 0 0.0" class="phys_metal"/>
+                </body>
+              </body>
+            </body>
+          </body>
+
+        </body>
+
+</mujocoinclude>
