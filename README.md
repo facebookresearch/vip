@@ -45,7 +45,7 @@ This should generate the following plots in `vip/examples/embedding_curves/`:
 <img src="vip/assets/fold_towel.png" width="200">
 </p>
 
-We also include an example for generating animated embedding distance curves for VIP and other models. You can try it here:
+We also include an example for generating animated embedding distance curves for VIP and other models on robot videos from three different domains. You can try it here:
 ```
 cd vip/examples
 python plot_reward_curves_video.py
@@ -57,6 +57,7 @@ This should generate the following plots (and more!) in `vip/examples/embedding_
 <img src="vip/assets/task_hammer_vip.gif" width="250">
 <img src="vip/assets/kitchen_sdoor_open-v3_vip.gif" width="250">
 </p>
+You can easily visualize VIP rewards on your own video by just replacing the video path in the example code!
 
 In addition to this official repository, VIP has also been incorporated into [TorchRL](https://github.com/pytorch/rl) as an out-of-box visual representation for any Gym environment. After you install TorchRL, using VIP is as simple as:
 ```
