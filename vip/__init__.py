@@ -58,6 +58,7 @@ def load_vip(modelid='resnet50'):
             raise NameError('Invalid Model ID')
         if not os.path.exists(modelpath):
             gdown.download(modelurl, modelpath, quiet=False)
+        if not os.path.exists(configpath):
             gdown.download(configurl, configpath, quiet=False)
 
     modelcfg = omegaconf.OmegaConf.load(configpath)
