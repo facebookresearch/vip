@@ -1,6 +1,6 @@
 # VIP: Towards Universal Visual Reward and Representation via Value-Implicit Pre-Training (ICLR 2023, Spotlight)
 
-#### [[Project Page]](https://sites.google.com/view/vip-rl/) [[Paper]](https://arxiv.org/abs/2210.00030)
+#### [[Paper]](https://arxiv.org/abs/2210.00030)
 
 [Jason Yecheng Ma](https://www.seas.upenn.edu/~jasonyma/)<sup>12</sup>, [Shagun Sodhani](https://shagunsodhani.com/)<sup>1</sup> [Dinesh Jayaraman](https://www.seas.upenn.edu/~dineshj/)<sup>2</sup>, [Osbert Bastani](https://obastani.github.io/)<sup>2</sup>, {[Vikash Kumar*](https://vikashplus.github.io/)<sup>1</sup>, [Amy Zhang*](https://amyzhang.github.io/)<sup>1</sup>}
 
