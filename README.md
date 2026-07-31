@@ -11,6 +11,13 @@ This is the official repository for VIP, a self-supervised zero-shot visual rewa
 <img src="vip/assets/VIP_GIF.gif">
 
 ## Installation
+
+```
+pip install git+https://github.com/facebookresearch/vip.git
+```
+
+## Installing Locally
+
 Create a conda environment where the packages will be installed.
 ```
 conda create --name vip python=3.9
